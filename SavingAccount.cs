@@ -13,6 +13,13 @@ namespace BankAccount
             AccountType = "Saving";
         }
 
+        public SavingAccount(decimal newbalance)
+        {
+            Balance = newbalance;
+            _savingaccount = new BankAccount(Balance);
+            AccountType = "Saving";
+        }
+
         public decimal Withdraw(decimal amount){
             Balance -= amount;
             return Balance;
