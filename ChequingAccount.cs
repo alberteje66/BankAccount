@@ -9,6 +9,12 @@ namespace BankAccount {
             _account = new BankAccount(Balance);
             AccountType = "Chequing";
         }
+        public ChequingAccount(decimal newbalance)
+        {
+            Balance = newbalance;
+             _account = new BankAccount(Balance);
+            AccountType = "Chequing";
+        }
 
         public decimal Withdraw(decimal amount){
             Balance -= amount;
